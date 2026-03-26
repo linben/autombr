@@ -95,7 +95,7 @@
 **Format**: `MBR_DAS-GenAI_[YYYY-MM].md`
 
 **Examples**:
-- `MBR_DAS-GenAI_2026-03.md`
+- `outputs/MBR_DAS-GenAI_2026-03.md`
 - `MBR_DAS-GenAI_2026-04.md`
 
 ## Document Length

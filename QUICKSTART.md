@@ -164,7 +164,7 @@ claude "Test connection to aws-sentral-mcp and list available tools"
 - Use `[DATA NEEDED: description]` for gaps
 
 ### Format Violations
-- Compare against `MBR_DAS-GenAI_2026-03.md` (reference example)
+- Compare against `outputs/MBR_DAS-GenAI_2026-03.md` (reference example)
 - Review rules in `rules/mbr_format_q*.md`
 - Check examples in `examples/mbr_examples_q*.md`
 
@@ -231,7 +231,7 @@ Verify compliance with all standards.
 2. **Review Phase 2 output** - Approve content plan before writing
 3. **Use real data only** - Never fabricate, use `[DATA NEEDED]` for gaps
 4. **Validate early** - Catch format issues before full generation
-5. **Reference examples** - Use `MBR_DAS-GenAI_2026-03.md` as guide
+5. **Reference examples** - Use `outputs/MBR_DAS-GenAI_2026-03.md` as guide
 
 ---
 

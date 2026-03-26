@@ -28,8 +28,11 @@ PROMPT=$(cat prompts/generate_mbr_prompt.md | \
     sed "s/{MONTH_START}/${MONTH_START}/g" | \
     sed "s/{MONTH_END}/${MONTH_END}/g")
 
+# Ensure outputs directory exists
+mkdir -p outputs
+
 # Check if output file already exists
-OUTPUT_FILE="MBR_DAS-GenAI_${MONTH}.md"
+OUTPUT_FILE="outputs/MBR_DAS-GenAI_${MONTH}.md"
 if [ -f "${OUTPUT_FILE}" ]; then
     echo "⚠️  Warning: ${OUTPUT_FILE} already exists"
     read -p "Overwrite? (y/N): " -n 1 -r

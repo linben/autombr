@@ -160,7 +160,7 @@ ADDITIONAL CONTEXT FOR MARCH 2026:
 
 1. **Run during business hours**: MCP tools need AWS credentials
 2. **Check MCP connection**: Verify `aws-sentral-mcp` is running
-3. **Review examples**: Look at `MBR_DAS-GenAI_2026-03.md` for reference
+3. **Review examples**: Look at `outputs/MBR_DAS-GenAI_2026-03.md` for reference
 4. **Validate early**: Run validation after Phase 3 to catch issues
 
 ### Troubleshooting

@@ -10,14 +10,22 @@ MBR_FILE=${1}
 if [ -z "${MBR_FILE}" ]; then
     echo "Usage: ./validate_mbr.sh <MBR_FILE>"
     echo ""
-    echo "Example:"
-    echo "  ./validate_mbr.sh MBR_DAS-GenAI_2026-04.md"
+    echo "Examples:"
+    echo "  ./validate_mbr.sh outputs/MBR_DAS-GenAI_2026-04.md"
+    echo "  ./validate_mbr.sh MBR_DAS-GenAI_2026-04.md  (auto-checks outputs/)"
     exit 1
 fi
 
+# Check if file exists, try outputs/ directory if not found
 if [ ! -f "${MBR_FILE}" ]; then
-    echo "❌ Error: File not found: ${MBR_FILE}"
-    exit 1
+    # Try outputs/ directory
+    if [ -f "outputs/${MBR_FILE}" ]; then
+        MBR_FILE="outputs/${MBR_FILE}"
+    else
+        echo "❌ Error: File not found: ${MBR_FILE}"
+        echo "   Also checked: outputs/${MBR_FILE}"
+        exit 1
+    fi
 fi
 
 echo "🔍 Validating MBR: ${MBR_FILE}"

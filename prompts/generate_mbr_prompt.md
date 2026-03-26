@@ -167,7 +167,7 @@ If gate fails: Revise outline to address missing coverage or format issues.
 
 **Requirements**:
 - Format: [TAG] **Bold Title.** Inline prose. [Next Steps] at end
-- NO STAR labels (Situation:/Task:/Action:/Result:)
+- NO STAR format (avoid labels like Situation:/Task:/Action:/Result:)
 - Priority order: [R] → [B] → [C] → [O]
 - 4-6 entries maximum
 - Each entry must include: account name, size band, $ amount, specific people, dates, current status
@@ -197,7 +197,7 @@ If gate fails: Revise outline to address missing coverage or format issues.
 
 **Requirements**:
 - Format: [H]/[L] **Bold Title.** 3-5 sentence mini-story. [Next Steps]
-- NO STAR labels, pure narrative
+- NO STAR format (avoid labels like Situation:/Task:/Action:/Result:), pure narrative
 - Include competitive context within story
 - Highlights: 5-8 entries | Lowlights: 3-5 entries
 - Each entry must tell complete story: what/why/how/competitive/next
@@ -228,25 +228,27 @@ If gate fails: Revise outline to address missing coverage or format issues.
 
 **Validation Checklist**:
 
+_Note: This checklist maps to 18 detailed rules in the critique agent (Rules 1.1-1.10 for Format, 2.1-2.3 for Data, 3.1-3.5 for Quality)_
+
 ### Format Compliance
-- [ ] Q1 is narrative paragraph, NOT bullets
-- [ ] Q1 observations are narrative paragraphs, NOT bullets
-- [ ] Q2 uses [TAG] format, inline prose, [Next Steps]
-- [ ] Q2 has NO STAR labels
-- [ ] Q3 is SIFT-sourced only
-- [ ] Q4 entries are 3-5 sentence mini-stories
-- [ ] Q4 has NO bullets
+- [ ] Q1 is narrative paragraph, NOT bullets (→ Critique Rule 1.1)
+- [ ] Q1 observations are narrative paragraphs, NOT bullets (→ Critique Rule 1.2)
+- [ ] Q2 uses [TAG] format, inline prose, [Next Steps] (→ Critique Rule 1.4)
+- [ ] Q2 has NO STAR labels (→ Critique Rule 1.4)
+- [ ] Q3 is SIFT-sourced only (→ Critique Rule 1.7)
+- [ ] Q4 entries are 3-5 sentence mini-stories (→ Critique Rule 1.8)
+- [ ] Q4 has NO bullets (→ Critique Rule 3.4)
 
 ### Data Completeness
-- [ ] All 5 groups in Q1, Q2, Q4, Top 20, Summary
-- [ ] Top 20 has exactly 20 entries from Salesforce
-- [ ] All numbers from Salesforce, gaps marked [DATA NEEDED]
+- [ ] All 5 groups in Q1, Q2, Q4, Top 20, Summary (→ Critique Rule 2.1)
+- [ ] Top 20 has exactly 20 entries from Salesforce (→ Critique Rule 2.2)
+- [ ] All numbers from Salesforce, gaps marked [DATA NEEDED] (→ Critique Rule 2.3)
 
 ### Content Quality
-- [ ] Named people, dates, $ amounts throughout
-- [ ] Competitive context named (GCP, Azure, OpenAI)
-- [ ] Every risk has owner + date for next action
-- [ ] Zero bullet points in Q1 and Q4
+- [ ] Named people, dates, $ amounts throughout (→ Critique Rule 3.1)
+- [ ] Competitive context named (GCP, Azure, OpenAI) (→ Critique Rule 3.2)
+- [ ] Every risk has owner + date for next action (→ Critique Rule 3.3)
+- [ ] Zero bullet points in Q1 and Q4 (→ Critique Rule 3.4)
 
 **If all checks pass**: Output final MBR document
 **If any check fails**: Stop immediately, report specific failure, request correction
@@ -257,7 +259,7 @@ If gate fails: Revise outline to address missing coverage or format issues.
 
 **Filename**: `MBR_DAS-GenAI_{MONTH}.md`
 
-**Reference Example**: [MBR_DAS-GenAI_2026-03.md](../MBR_DAS-GenAI_2026-03.md)
+**Reference Example**: [MBR_DAS-GenAI_2026-03.md](../outputs/MBR_DAS-GenAI_2026-03.md)
 
 **Document Structure**:
 ```

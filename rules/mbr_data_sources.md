@@ -33,8 +33,8 @@ If a group has no data for a section, mark [DATA NEEDED: group]
 
 ### RULE 4: SIFT DATA SOURCING
 
-- Search by group manager aliases: conwachr, hdevore, artisvan, jdarcy, acomstoc, capotts, perkiand
-- Also search by DM alias (vinokri) for cross-group insights
+- Search by group manager aliases: conwachr, hdevore, artisvan, acomstoc, capotts
+- Also search by DM alias for cross-group insights
 - Date range: last 30 days from report date
 - Categorize: H (Highlight), L (Lowlight), O (Observation), R (Risk), B (Blocker), C (Competitive/Challenge)
 

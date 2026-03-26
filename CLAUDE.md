@@ -61,6 +61,8 @@ available_tools = mcp_client.list_tools_sync()
 
 ## Data Sources
 
+**See also**: [rules/mbr_data_sources.md](rules/mbr_data_sources.md) for complete data source specifications
+
 ### Salesforce Data (via MCP)
 
 **Available Tools**:
@@ -104,32 +106,12 @@ available_tools = mcp_client.list_tools_sync()
 
 ### Fixed Reference Data
 
-**DAS-GenAI Org Structure**:
-- **Total Accounts**: ~308
-- **Territory Groups**: 5
-- **Territories**: 40 (8 per group)
+**See also**: [rules/mbr_org_structure.md](rules/mbr_org_structure.md) for complete organization structure, manager assignments, and size band definitions
 
-**Groups and Filters**:
-| Group | Filter | Territories |
-|-------|--------|-------------|
-| DAS-GenAI-West-A | DASGENAI-WEST-A | A-01 through A-08 |
-| DAS-GenAI-East-A | DASGENAI-EAST-A | A-01 through A-08 |
-| DAS-GenAI-West-B | DASGENAI-WEST-B | B-01 through B-08 |
-| DAS-GenAI-GenAI-A | DASGENAI-GENAI-A | A-01 through A-08 |
-| DAS-GenAI-East-B | DASGENAI-EAST-B | B-01 through B-08 |
-
-**Group Managers** (SIFT creators):
-- West-A: Christian Conway (conwachr)
-- East-A: Heather Devore (hdevore)
-- West-B: Vanja Artis (artisvan) / Carol Potts (capotts)
-- GenAI-A: Max Tynan (maxtynan) / Jillian D'arcy (jdarcy)
-- East-B: Aarti Comstock (acomstoc) / Andy Perkins (perkiand)
-- District Manager: Vinay Krishna (vinokri) - cross-group insights
-
-**Account Size Bands**:
-- **L** (Large): $100K - $1M ARR
-- **XL** (Extra Large): $1M - $5M ARR
-- **XXL** (Enterprise): $5M+ ARR
+**Quick Reference**:
+- **Total Accounts**: ~308 across 5 territory groups (40 territories total)
+- **Groups**: DASGENAI-WEST-A, DASGENAI-EAST-A, DASGENAI-WEST-B, DASGENAI-GENAI-A, DASGENAI-EAST-B
+- **Size Bands**: L ($100K-$1M), XL ($1M-$5M), XXL ($5M+)
 
 ## Project Structure
 
@@ -140,7 +122,7 @@ available_tools = mcp_client.list_tools_sync()
 - Validates format compliance and content standards
 - Used to review generated MBRs before submission
 
-**[MBR_DAS-GenAI_2026-03.md](MBR_DAS-GenAI_2026-03.md)** - Example Output
+**[MBR_DAS-GenAI_2026-03.md](outputs/MBR_DAS-GenAI_2026-03.md)** - Example Output
 - Complete MBR from March 2026
 - Shows expected format and content quality
 - Reference for what good output looks like
@@ -202,6 +184,8 @@ available_tools = mcp_client.list_tools_sync()
 - Document any spec clarifications needed
 
 ## Error Handling Patterns
+
+**See also**: [rules/mbr_error_handling.md](rules/mbr_error_handling.md) for detailed recovery protocols
 
 ### Missing Data
 - **Salesforce returns no data**: Mark `[DATA NEEDED: Salesforce opportunities for DASGENAI-WEST-A]`
@@ -270,9 +254,11 @@ available_tools = mcp_client.list_tools_sync()
 
 ### Format Compliance
 - Q1: Narrative paragraphs, NO bullets
-- Q2: [TAG] Bold Title. Inline prose. [Next Steps]. NO STAR format
+- Q2: [TAG] Bold Title. Inline prose. [Next Steps]. NO STAR format (Situation:/Task:/Action:/Result:)
 - Q3: SIFT-sourced only, SA engagement documented
 - Q4: 3-5 sentence mini-stories, NO bullets
+
+**See also**: [rules/mbr_phase4_validation.md](rules/mbr_phase4_validation.md) for complete validation checklist
 
 ### Data Completeness
 - All 5 groups represented in every quadrant
