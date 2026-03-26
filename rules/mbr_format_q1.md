@@ -26,15 +26,21 @@ Write as a single flowing paragraph including:
 
 ### Top Business Observations
 
-Follow with 3-5 short narrative paragraphs (3-5 lines each):
+**Format**: 3-5 separate observation paragraphs (each 3-5 sentences)
+
+- Each observation is a standalone paragraph addressing one pattern or theme
+- Each paragraph should be 3-5 sentences long
+- Total: 3-5 observations (NOT 3-5 sentences total)
 
 **Pattern for Each Observation**:
+
 1. Pattern headline (the trend/insight)
 2. Named accounts with size band (L/XL/XXL) and group
 3. $ ARR amounts inline
 4. [Ask] at end for action items
 
 **Example Flow**:
+
 "Pattern: [trend description]. [Account1] (XXL, DASGENAI-WEST-A) [action] $X.XM ARR [detail]. [Account2] (XL, DASGENAI-EAST-A) [action] $X.XM ARR [detail]. [Ask: specific request]."
 
 ## Critical Rules
@@ -68,13 +74,31 @@ Follow with 3-5 short narrative paragraphs (3-5 lines each):
 - Risks or blockers (those go in Q2)
 - Cross-account initiatives (those go in Q3 if SIFT-sourced)
 
+## Action Tags
+
+### [Ask] Format
+
+Use `[Ask: specific request]` at the end of observations when requesting support from other teams (service teams, GTM, SA leadership):
+
+**Example**: `[Ask: Service team support for S3 Tables ISV integration patterns]`
+
+**Use Cases**:
+- Requesting service team engagement or features
+- Asking for GTM support or programs
+- Seeking SA leadership guidance or resources
+- Requesting technical enablement or documentation
+
+**Contrast with [Next Steps]**: Use [Ask] when you need help from others. Use [Next Steps] (in Q2/Q4) when documenting committed actions you/your team will take.
+
 ## Quality Checks
 
 Before considering Q1 complete, verify:
+
 - [ ] Zero bullet points used
-- [ ] All 5 groups mentioned
+- [ ] All 5 groups mentioned (DASGENAI-WEST-A, DASGENAI-EAST-A, DASGENAI-WEST-B, DASGENAI-GENAI-A, DASGENAI-EAST-B)
 - [ ] Specific $ amounts and % included
 - [ ] Each observation has named accounts
 - [ ] Size bands (L/XL/XXL) specified
 - [ ] [Ask] included where appropriate
 - [ ] Content is NEW for this month (not generic)
+- [ ] If group data missing, documented with [DATA NEEDED: {group}]

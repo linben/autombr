@@ -73,9 +73,23 @@ Present entries in this order: [R] → [B] → [C] → [O]
 - Cross-account initiatives (those go in Q3)
 - General observations without risk (those go in Q1)
 
+## Action Tags
+
+### [Next Steps] Format
+
+Use `[Next Steps: specific action with owner name and date]` at the end of each entry to document committed actions:
+
+**Example**: `[Next Steps: Executive sponsor call scheduled 2026-03-28, owner Sarah Chen]`
+
+**Requirements**:
+- Owner must be a specific person (not "team" or "group")
+- Date must be specific (not "Q2" or "soon")
+- Action must be concrete and traceable
+
 ## Quality Checks
 
 Before considering Q2 complete, verify:
+
 - [ ] All entries use [TAG] format
 - [ ] NO STAR labels (Situation:/Task:/Action:/Result:)
 - [ ] Entries are pure prose narrative
@@ -85,3 +99,5 @@ Before considering Q2 complete, verify:
 - [ ] Priority order followed: [R] → [B] → [C] → [O]
 - [ ] 4-6 entries maximum
 - [ ] Every entry backed by Salesforce/SIFT data
+- [ ] All 5 territory groups represented (DASGENAI-WEST-A, DASGENAI-EAST-A, DASGENAI-WEST-B, DASGENAI-GENAI-A, DASGENAI-EAST-B)
+- [ ] If group data missing, documented with [DATA NEEDED: {group}]

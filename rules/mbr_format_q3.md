@@ -94,6 +94,7 @@ Contact your SA leadership to document cross-account technical patterns.
 ## Quality Checks
 
 Before considering Q3 complete, verify:
+
 - [ ] Every initiative cited with SIFT source
 - [ ] Pipeline impact quantified ($ or accounts)
 - [ ] Specific customer names included
@@ -101,4 +102,6 @@ Before considering Q3 complete, verify:
 - [ ] Scaling plans with codes (TFC/GTM)
 - [ ] NO account-level observations included
 - [ ] All initiatives show cross-account patterns
+- [ ] Initiatives span multiple territory groups where possible (DASGENAI-WEST-A, DASGENAI-EAST-A, DASGENAI-WEST-B, DASGENAI-GENAI-A, DASGENAI-EAST-B)
+- [ ] If no initiatives found for certain groups, documented with placeholder guidance
 - [ ] OR placeholder used if none found

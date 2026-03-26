@@ -21,19 +21,41 @@ and date].
 
 ## Story Structure
 
-### Highlight Mini-Story (3-5 sentences)
-1. **What happened**: Account, action, $ impact, YoY growth
-2. **Why it matters**: Business driver, technical benefit, competitive win
-3. **How we did it**: SA engagement, technical deep dive, dates
-4. **Competitive context**: What we overcame (GCP offer, Azure pitch)
-5. **What's next**: Future plans, next steps with owner and date
+Each entry must be a **3-5 sentence flowing narrative** that naturally incorporates these elements. The numbered lists below are **thinking frameworks** for composing your narrative, NOT section headers to use in output.
 
-### Lowlight Mini-Story (3-5 sentences)
-1. **What happened**: Problem, delay, $ impact, timing miss
-2. **Why it happened**: Root cause, missed step, external factor
-3. **How we responded**: Escalation, owner action, recovery plan
-4. **What we learned**: Process improvement, training need, system change
-5. **What's next**: Corrective actions with owner and date
+### Highlight Mini-Story Elements
+
+Your narrative should weave together:
+
+- **What happened**: Account, action, $ impact, YoY growth
+- **Why it matters**: Business driver, technical benefit, competitive win
+- **How we did it**: SA engagement, technical deep dive, dates
+- **Competitive context**: What we overcame (GCP offer, Azure pitch)
+- **What's next**: Future plans, next steps with owner and date
+
+**Template** (weave into prose):
+
+```markdown
+[H] **Bold Title.** {Account} ({size}, {group}) {what happened with $ impact and YoY%}. {Why it matters: business driver}. {How: SA engagement, dates, people, competitive context if relevant}. [Next Steps: {specific action with owner and date}].
+```
+
+### Lowlight Mini-Story Elements
+
+Your narrative should weave together:
+
+- **What happened**: Problem, delay, $ impact, timing miss
+- **Why it happened**: Root cause, missed step, external factor
+- **How we responded**: Escalation, owner action, recovery plan
+- **What we learned**: Process improvement, training need, system change
+- **What's next**: Corrective actions with owner and date
+
+**Template** (weave into prose):
+
+```markdown
+[L] **Bold Title.** {What happened: problem, account, $ impact}. {Why it happened: root cause}. {How we responded: escalation, actions}. {What we learned: lesson, process change}. [Next Steps: {corrective action with owner and date}].
+```
+
+**Important**: Do NOT output numbered sections like "1. What happened:" in the final text. These elements should flow naturally within 3-5 complete sentences.
 
 ## Content Requirements
 
@@ -92,9 +114,23 @@ and date].
 - Risks still in flight (those go in Q2)
 - General observations (those go in Q1)
 
+## Action Tags
+
+### [Next Steps] Format
+
+Use `[Next Steps: specific action with owner name and date]` at the end of each entry to document committed actions:
+
+**Example**: `[Next Steps: Joint PR-FAQ for re:Invent launch, GTM workshop on 4/15 with DataStax GTM lead Sam Chen]`
+
+**Requirements**:
+- Owner must be a specific person (not "team" or "group")
+- Date must be specific (not "Q2" or "soon")
+- Action must be concrete and traceable
+
 ## Quality Checks
 
 Before considering Q4 complete, verify:
+
 - [ ] Zero bullet points used
 - [ ] All entries are 3-5 sentence mini-stories
 - [ ] NO STAR labels used
@@ -105,3 +141,5 @@ Before considering Q4 complete, verify:
 - [ ] Highlights: 5-8 entries
 - [ ] Lowlights: 3-5 entries
 - [ ] Root cause included in lowlights
+- [ ] All 5 territory groups represented (DASGENAI-WEST-A, DASGENAI-EAST-A, DASGENAI-WEST-B, DASGENAI-GENAI-A, DASGENAI-EAST-B)
+- [ ] If group data missing, documented with [DATA NEEDED: {group}]
