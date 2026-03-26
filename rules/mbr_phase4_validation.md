@@ -24,10 +24,19 @@ Verify compliance with all standards before submission. This is a quality gate.
 - [ ] All numbers from Salesforce, gaps marked [DATA NEEDED]
 
 ### Content Quality
+
+- [ ] **CHECK 1 - Data Provenance**: Every account mentioned is in the DAS-GenAI 308-account portfolio
+- [ ] **CHECK 2 - No Duplicates**: Each account appears in ONE quadrant only (verify Q4 accounts not in Q1 or Q2)
+- [ ] **CHECK 4 - No Stale Preamble**: First sentences are NEW this month (not generic lines repeated monthly)
 - [ ] Named people, dates, $ amounts throughout
 - [ ] Competitive context named (GCP, Azure, OpenAI)
 - [ ] Every risk has owner + date for next action
 - [ ] Zero bullet points in Q1 and Q4
+- [ ] Q2 content filtration applied (litmus test: "What is at risk RIGHT NOW?")
+- [ ] NO size bands (L/XL/XXL) in narrative text
+- [ ] NO group references (DASGENAI-*) in narrative text
+- [ ] NO individual AM/DM/SA names in narrative (use "SA"/"AM" role labels)
+- [ ] Customer executive names and PM names ARE allowed
 
 ## Validation Actions
 

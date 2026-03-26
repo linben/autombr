@@ -31,16 +31,22 @@ PROMPT=$(cat prompts/generate_mbr_prompt.md | \
 # Ensure outputs directory exists
 mkdir -p outputs
 
-# Check if output file already exists
-OUTPUT_FILE="outputs/MBR_DAS-GenAI_${MONTH}.md"
-if [ -f "${OUTPUT_FILE}" ]; then
-    echo "⚠️  Warning: ${OUTPUT_FILE} already exists"
-    read -p "Overwrite? (y/N): " -n 1 -r
-    echo
-    if [[ ! $REPLY =~ ^[Yy]$ ]]; then
-        echo "❌ Cancelled"
-        exit 1
-    fi
+# Auto-increment output filename if file already exists
+BASE_OUTPUT_FILE="outputs/MBR_DAS-GenAI_${MONTH}.md"
+OUTPUT_FILE="${BASE_OUTPUT_FILE}"
+VERSION=2
+
+if [ -f "${BASE_OUTPUT_FILE}" ]; then
+    echo "ℹ️  ${BASE_OUTPUT_FILE} already exists"
+
+    # Find next available version number
+    while [ -f "outputs/MBR_DAS-GenAI_${MONTH}_v${VERSION}.md" ]; do
+        VERSION=$((VERSION + 1))
+    done
+
+    OUTPUT_FILE="outputs/MBR_DAS-GenAI_${MONTH}_v${VERSION}.md"
+    echo "✅ Auto-incremented to: ${OUTPUT_FILE}"
+    echo ""
 fi
 
 echo "📝 Starting MBR generation..."

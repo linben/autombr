@@ -7,7 +7,7 @@
 
 "The DAS-GenAI district delivered $47.2M in NNIR for March, achieving 103% of the $45.8M quota and representing 18% YoY growth. Top three NNIR drivers were: DataStax ($8.4M, 42% YoY), MongoDB ($6.1M, 15% YoY), and Databricks ($5.9M, 38% YoY). AI-specific revenue reached $12.3M against a $10.5M quota (117% attainment), with top AI drivers being Writer AI ($2.1M), Grammarly ($1.8M), and Snorkel AI ($1.4M). April forecast projects $49.1M based on current Stage 3+ pipeline. YTD position is 105% to goal at $138.7M of $132M target. Tech engagement rate for Core pipeline is 78% and GenAI pipeline is 92%.
 
-Pattern: Multi-cloud data platforms consolidating to AWS. DataStax (XXL, DASGENAI-WEST-A) migrated $3.2M ARR from GCP to AWS S3 Tables, citing 40% cost reduction and simplified architecture. MongoDB (XXL, DASGENAI-EAST-A) expanded $2.1M ARR for Atlas on AWS with DocumentDB integration. CockroachDB (XL, DASGENAI-GENAI-A) added $1.4M ARR for serverless workloads. [Ask: Service team support for S3 Tables ISV integration patterns]."
+Pattern: Multi-cloud data platforms consolidating to AWS. DataStax migrated $3.2M ARR from GCP to AWS S3 Tables, citing 40% cost reduction and simplified architecture. MongoDB expanded $2.1M ARR for Atlas on AWS with DocumentDB integration. CockroachDB added $1.4M ARR for serverless workloads. [Ask: Service team support for S3 Tables ISV integration patterns]."
 
 ### Why GOOD
 
@@ -20,8 +20,7 @@ Pattern: Multi-cloud data platforms consolidating to AWS. DataStax (XXL, DASGENA
 
 ✅ **Observation as narrative paragraph** (3-5 lines)
 ✅ **Pattern headline** clearly stated
-✅ **Accounts named** with size bands (XXL, XL)
-✅ **Groups identified** (DASGENAI-WEST-A, DASGENAI-EAST-A, etc.)
+✅ **Accounts named** (account names only, no size bands or group labels)
 ✅ **$ ARR inline** for each account
 ✅ **[Ask]** included for actionable follow-up
 
@@ -34,8 +33,6 @@ Pattern: Multi-cloud data platforms consolidating to AWS. DataStax (XXL, DASGENA
 ❌ **Generic language**: "good", "several", "strong" (not specific)
 ❌ **No numbers**: No $ amounts, no percentages, no quotas
 ❌ **No account names**: Says "top accounts" but doesn't name them
-❌ **No size bands**: Doesn't indicate L/XL/XXL
-❌ **No groups**: Doesn't reference DASGENAI-* groups
 ❌ **No YoY growth**: Missing comparative metrics
 ❌ **No actionability**: No [Ask], no specific patterns
 ❌ **Vague observations**: "interested in GenAI" tells us nothing
@@ -55,9 +52,7 @@ Pattern: Multi-cloud data platforms consolidating to AWS. DataStax (XXL, DASGENA
 
 ### Observation Paragraphs Must Have
 - Clear pattern statement
-- 3+ named accounts
-- Size bands (L/XL/XXL)
-- Group assignments (DASGENAI-*)
+- 3+ named accounts (account names only, no size bands or group labels)
 - $ ARR for each account
 - Specific technical details
 - [Ask] for action items
@@ -66,6 +61,7 @@ Pattern: Multi-cloud data platforms consolidating to AWS. DataStax (XXL, DASGENA
 - Using bullet points (Q1 must be prose)
 - Generic preambles repeated monthly
 - Vague language without numbers
-- Accounts without size bands
+- Including size bands (XXL/XL/L) or group labels (DASGENAI-*) in narrative text
 - Observations without $ impact
-- Missing group representation
+- Missing data from all 5 territory groups
+- Naming individual AMs, DMs, or SAs in narrative text

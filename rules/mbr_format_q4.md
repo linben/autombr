@@ -36,7 +36,7 @@ Your narrative should weave together:
 **Template** (weave into prose):
 
 ```markdown
-[H] **Bold Title.** {Account} ({size}, {group}) {what happened with $ impact and YoY%}. {Why it matters: business driver}. {How: SA engagement, dates, people, competitive context if relevant}. [Next Steps: {specific action with owner and date}].
+[H] **Bold Title.** {Account} {what happened with $ impact and YoY%}. {Why it matters: business driver}. {How: SA engagement, dates, customer executives, competitive context if relevant}. [Next Steps: {specific action with owner role (SA/AM) and date}].
 ```
 
 ### Lowlight Mini-Story Elements
@@ -60,19 +60,22 @@ Your narrative should weave together:
 ## Content Requirements
 
 ### Must Include Inline
-- **Account name** with size band (L/XL/XXL) and group
+
+- **Account name** (no size bands or group labels)
 - **$ amount** (ARR, deal size, revenue impact)
 - **YoY growth %** for highlights
-- **Specific people** (SA, AM, customer contacts)
+- **Specific people** (use "SA" or "AM" role labels, customer executives by name, PM contacts by name)
 - **Dates** (engagement periods, deadlines, events)
 - **Technical details** (services, features, architectures)
 - **Competitive context** (GCP, Azure, first-party alternatives)
-- **Next steps** with owner name and specific date
+- **Next steps** with owner role (SA/AM) and specific date
 
 ## Entry Counts
 
-- **Highlights**: 5-8 entries
-- **Lowlights**: 3-5 entries
+- **Highlights**: 3-6 entries
+- **Lowlights**: 2-4 entries
+
+**Note**: Prioritize depth over quantity. Better to have fewer high-quality, well-researched stories than many shallow entries.
 
 ## Critical Rules
 
@@ -113,6 +116,29 @@ Your narrative should weave together:
 - Cross-account patterns (those go in Q3)
 - Risks still in flight (those go in Q2)
 - General observations (those go in Q1)
+- **Accounts already mentioned in Q1 or Q2** (anti-duplication rule - see below)
+
+## Anti-Duplication Rule (CRITICAL)
+
+**NO REPEAT RULE**: Each account appears in ONE quadrant only.
+
+- If account is in Q1 observations → do NOT repeat in Q4
+- If account is in Q2 risks → do NOT repeat in Q4
+- Q4 must contain ONLY accounts not already mentioned in Q1 or Q2
+- Run duplicate check before finalizing (see validation rules)
+
+**Why This Matters**:
+
+- Duplicate accounts inflate report, waste space, confuse readers
+- Each quadrant serves a different purpose - account stories should not repeat
+- Q1 is for business/deal stories, Q2 is for systemic risks, Q4 is for SA-led technical impact
+- If an account has both a business story (Q1) AND an SA technical win, choose the quadrant that best represents the primary insight for THIS month
+
+**Enforcement**:
+
+- Before finalizing Q4, verify each account against Q1 and Q2 content
+- If duplicate found, remove from Q4 or consolidate into single quadrant entry
+- Validation phase includes CHECK 2: No duplicates across quadrants
 
 ## Action Tags
 
@@ -136,10 +162,15 @@ Before considering Q4 complete, verify:
 - [ ] NO STAR labels used
 - [ ] Competitive context included where relevant
 - [ ] All entries have $ amounts
-- [ ] All entries name specific people
+- [ ] All entries name specific people (use "SA"/"AM" role labels, customer executives by name)
 - [ ] All entries have dates and next steps
-- [ ] Highlights: 5-8 entries
-- [ ] Lowlights: 3-5 entries
+- [ ] Highlights: 3-6 entries
+- [ ] Lowlights: 2-4 entries
 - [ ] Root cause included in lowlights
-- [ ] All 5 territory groups represented (DASGENAI-WEST-A, DASGENAI-EAST-A, DASGENAI-WEST-B, DASGENAI-GENAI-A, DASGENAI-EAST-B)
+- [ ] All 5 territory groups represented (data from all groups, NO group labels in narrative)
+- [ ] NO size bands (L/XL/XXL) in narrative text
+- [ ] NO group references (DASGENAI-*) in narrative text
+- [ ] NO individual AM/DM/SA names in narrative text
+- [ ] Customer executive names and PM names ARE allowed
 - [ ] If group data missing, documented with [DATA NEEDED: {group}]
+- [ ] NO duplicate accounts (verify against Q1 and Q2 before finalizing)

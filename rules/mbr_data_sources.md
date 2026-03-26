@@ -31,12 +31,79 @@ If a group has no data for a section, mark [DATA NEEDED: group]
 - Territories: list_territories per group filter
 - **Never fabricate numbers**. Use [DATA NEEDED: description] for gaps.
 
-### RULE 4: SIFT DATA SOURCING
+### RULE 4: SIFT DATA SOURCING (CRITICAL)
 
-- Search by group manager aliases: conwachr, hdevore, artisvan, acomstoc, capotts
-- Also search by DM alias for cross-group insights
-- Date range: last 30 days from report date
-- Categorize: H (Highlight), L (Lowlight), O (Observation), R (Risk), B (Blocker), C (Competitive/Challenge)
+**ALWAYS search BOTH AM aliases AND SA aliases for every group.**
+Missing either will result in incomplete coverage.
+
+#### Why Comprehensive Coverage Matters
+
+- Q4 (SA-led highlights/lowlights) requires SA-authored SIFTs
+- Q1/Q2 (business observations, risks) require AM-authored SIFTs
+- Searching only managers (~10 aliases) misses 60+ SA/AM contributors
+- Result: incomplete Q4 content, missing SA technical wins
+
+#### Batch Search Strategy
+
+Execute searches in 10 batches to ensure MCP tool performance:
+
+**Batch 1 - Choksi SAs (10 aliases)**:
+
+- sharmajt, vinokri, twaman, dantrard, sjjambun, nwadhera, prernami, linbenj, irdoshi, sparkcon
+
+**Batch 2 - Pierce SAs (9 aliases)**:
+
+- pkthati, panasewi, dfrizner, vindah, glovlato, yerkolas, kulneel, kevinvt, aberagh
+
+**Batch 3 - Ravula SAs (7 aliases)**:
+
+- euckew, haoxil, malinich, amythili, weinsran, micbert, sankampa
+
+**Batch 4 - IC SAs (5 aliases)**:
+
+- vppwr, bniu, pablito, mankhanu, spalakod
+
+**Batch 5 - West-A AMs (8 aliases)**:
+
+- pmoazeni, dinkle, jotimmes, mihelich, marweav, brannaus, setbrook, jrdnc
+
+**Batch 6 - East-A AMs (8 aliases)**:
+
+- rpisapat, gregfoss, joshkeri, kjepeter, kmc, ckdaley, nessjuli, lzahav
+
+**Batch 7 - West-B AMs (7 aliases)**:
+
+- theisenh, kandrso, bkammere, lucadoan, mmilloy, tobinjos, ahmshawn
+
+**Batch 8 - GenAI-A AMs (7 aliases)**:
+
+- mckellen, bswalsh, msulman, golestan, natesund, mathcyri, michsole
+
+**Batch 9 - East-B AMs (8 aliases)**:
+
+- slgreen, noaoron, dihoover, rynolfr, bbbicket, aggivehc, dpericks, tonryan
+
+**Batch 10 - Group Managers (8 aliases)**:
+
+- conwachr, hdevore, artisvan, capotts, jdarcy, maxtynan, acomstoc, perkiand
+
+**Total Coverage**: ~70 aliases across SA teams, AM teams, and managers
+
+#### Search Parameters
+
+- dateRangeStart: (today - 30 days)
+- dateRangeEnd: today
+- createdBy: [batch_aliases]
+- Fields: title, description, category, createdAt, createdBy
+
+#### Categorization
+
+- H (Highlight) - Wins, successes, positive outcomes
+- L (Lowlight) - Setbacks, challenges, lessons learned
+- O (Observation) - Patterns, trends, field intelligence
+- R (Risk) - Potential problems, revenue at risk
+- B (Blocker) - Critical impediments requiring action
+- C (Competitive/Challenge) - Market dynamics, competitor activity
 
 ## Required Inputs
 
@@ -63,10 +130,22 @@ If a group has no data for a section, mark [DATA NEEDED: group]
 ### From SIFT (via MCP)
 
 **sift_insights_search**:
-- dateRangeStart: (today - 30 days)
-- dateRangeEnd: today
-- createdBy: [conwachr, hdevore, artisvan, jdarcy, acomstoc, capotts, perkiand, vinokri]
-- Fields: title, description, category, createdAt, createdBy
+
+**CRITICAL**: Execute batch search strategy from Rule 4 above. Search ALL 10 batches covering ~70 aliases.
+
+For each batch, execute:
+
+```python
+sift_insights_search(
+  dateRangeStart: (today - 30 days),
+  dateRangeEnd: today,
+  createdBy: [batch_aliases]
+)
+```
+
+- Returns: title, description, category, createdAt, createdBy
+- Aggregate results across all 10 batches
+- Categorize by SIFT type: [H], [L], [O], [R], [B], [C]
 
 ### Fixed Reference Data
 

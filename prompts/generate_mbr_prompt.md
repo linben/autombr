@@ -2,6 +2,11 @@
 
 Generate a complete Monthly Business Review (MBR) for the AWS DAS-GenAI district following the 4-phase process.
 
+**IMPORTANT: Output File Creation**
+- **Create a NEW file** - Do NOT modify or update existing MBR files
+- The script automatically handles versioning if the base filename exists
+- Each generation run produces a separate, independent document
+
 ---
 
 ## Phase 1: Data Discovery
@@ -23,12 +28,19 @@ Generate a complete Monthly Business Review (MBR) for the AWS DAS-GenAI district
 - Get tech engagement rates (Core and GenAI pipeline)
 
 ### 1.2 Collect SIFT Insights
-- Use `sift_insights_search` MCP tool:
+
+**CRITICAL**: Execute batch search strategy from [rules/mbr_data_sources.md](../rules/mbr_data_sources.md) Rule 4.
+
+- Search ALL 10 batches covering ~70 aliases (SA teams + AM teams + managers)
+- Use `sift_insights_search` MCP tool for each batch:
   - dateRangeStart: {MONTH_START} (e.g., 2026-04-01)
   - dateRangeEnd: {MONTH_END} (e.g., 2026-04-30)
-  - createdBy: [conwachr, hdevore, artisvan, capotts, jdarcy, maxtynan, acomstoc, perkiand, vinokri]
+  - createdBy: [batch_aliases] (see Rule 4 for complete batch lists)
+- Aggregate results across all 10 batches
 - Categorize insights: [H], [L], [O], [R], [B], [C]
 - Identify cross-account patterns for Q3
+
+**Why This Matters**: Searching only manager aliases (~10) misses 60+ SA/AM contributors, resulting in incomplete Q4 SA-led content.
 
 ### 1.3 Collect Top Opportunities
 - Use `search_opportunities` with:
@@ -226,38 +238,82 @@ If gate fails: Revise outline to address missing coverage or format issues.
 **Rules**: [rules/mbr_phase4_validation.md](../rules/mbr_phase4_validation.md)
 **Critique Agent**: [mbr-critique-agent-prompt.md](../mbr-critique-agent-prompt.md)
 
-**Validation Checklist**:
+### Step 4.1: Write MBR to File
 
-_Note: This checklist maps to 18 detailed rules in the critique agent (Rules 1.1-1.10 for Format, 2.1-2.3 for Data, 3.1-3.5 for Quality)_
+Write the complete MBR document to: `outputs/MBR_DAS-GenAI_{MONTH}.md`
 
-### Format Compliance
-- [ ] Q1 is narrative paragraph, NOT bullets (→ Critique Rule 1.1)
-- [ ] Q1 observations are narrative paragraphs, NOT bullets (→ Critique Rule 1.2)
-- [ ] Q2 uses [TAG] format, inline prose, [Next Steps] (→ Critique Rule 1.4)
-- [ ] Q2 has NO STAR labels (→ Critique Rule 1.4)
-- [ ] Q3 is SIFT-sourced only (→ Critique Rule 1.7)
-- [ ] Q4 entries are 3-5 sentence mini-stories (→ Critique Rule 1.8)
-- [ ] Q4 has NO bullets (→ Critique Rule 3.4)
+**IMPORTANT**:
+- Create a NEW file with the complete content
+- Do NOT update or edit any existing files
+- The script handles auto-versioning if needed
 
-### Data Completeness
-- [ ] All 5 groups in Q1, Q2, Q4, Top 20, Summary (→ Critique Rule 2.1)
-- [ ] Top 20 has exactly 20 entries from Salesforce (→ Critique Rule 2.2)
-- [ ] All numbers from Salesforce, gaps marked [DATA NEEDED] (→ Critique Rule 2.3)
+### Step 4.2: Automated Critique Validation
 
-### Content Quality
-- [ ] Named people, dates, $ amounts throughout (→ Critique Rule 3.1)
-- [ ] Competitive context named (GCP, Azure, OpenAI) (→ Critique Rule 3.2)
-- [ ] Every risk has owner + date for next action (→ Critique Rule 3.3)
-- [ ] Zero bullet points in Q1 and Q4 (→ Critique Rule 3.4)
+**Use the Agent tool to launch a critique subagent:**
 
-**If all checks pass**: Output final MBR document
-**If any check fails**: Stop immediately, report specific failure, request correction
+```python
+Agent(
+    subagent_type="general-purpose",
+    description="Validate MBR against quality rules",
+    prompt=f"""
+Read the MBR critique agent prompt from mbr-critique-agent-prompt.md and the generated MBR from outputs/MBR_DAS-GenAI_{MONTH}.md.
+
+Execute all 18 validation checks from the critique agent specification:
+- Phase 1: Format Compliance (Rules 1.1-1.10)
+- Phase 2: Data Completeness (Rules 2.1-2.3)
+- Phase 3: Content Quality (Rules 3.1-3.5)
+
+Report findings in the structured format with:
+1. Rule-by-rule assessment with evidence
+2. Compliance score summary
+3. Final recommendation (APPROVE/REVISE/REJECT)
+
+Focus on CRITICAL and MAJOR issues that must be fixed.
+"""
+)
+```
+
+### Step 4.3: Report Validation Results
+
+The critique agent will report:
+
+**Compliance Score Summary:**
+- PASS count (rules satisfied)
+- CRITICAL issues (fix before submission)
+- MAJOR issues (fix in next revision)
+- MINOR issues (polish pass)
+- Recommendation: APPROVE / REVISE / REJECT
+
+**Thresholds:**
+- **APPROVE**: 0 Critical, ≤2 Major
+- **REVISE**: 1-2 Critical OR 3-5 Major
+- **REJECT**: 3+ Critical OR 6+ Major
+
+### Step 4.4: Final Output
+
+**If validation passes (APPROVE):**
+- ✅ Output the MBR file location
+- ✅ Report compliance rate
+- ✅ Document is ready for submission
+
+**If validation fails (REVISE/REJECT):**
+- ⚠️ Report specific issues found
+- ⚠️ List required fixes
+- ⚠️ Suggest re-running after corrections
+
+**Output**: Validated MBR document with quality assessment report
 
 ---
 
 ## Output Format
 
-**Filename**: `MBR_DAS-GenAI_{MONTH}.md`
+**Filename**: `outputs/MBR_DAS-GenAI_{MONTH}.md`
+
+**CRITICAL: File Creation Rule**
+- **Always create a NEW output file** - Never edit or update existing MBR files
+- Write the complete document as fresh content
+- The generation script handles filename versioning automatically (e.g., `_v2`, `_v3` if base file exists)
+- Each generation run is independent and produces a standalone document
 
 **Reference Example**: [MBR_DAS-GenAI_2026-03.md](../outputs/MBR_DAS-GenAI_2026-03.md)
 
@@ -367,11 +423,12 @@ _Note: This checklist maps to 18 detailed rules in the critique agent (Rules 1.1
 
 ## Execution Notes
 
-1. **Follow phases in order**: Don't skip to writing without data collection and planning
-2. **Stop at checkpoints**: Phase 2 output should be reviewed before proceeding to Phase 3
-3. **Validate continuously**: Check format rules as you write each section
-4. **Use real data only**: Never fabricate - use [DATA NEEDED] for gaps
-5. **Reference examples**: Use good/bad examples from examples/ directory as patterns
+1. **Create new file only**: Generate a complete NEW document - never edit or update existing MBR files
+2. **Follow phases in order**: Don't skip to writing without data collection and planning
+3. **Stop at checkpoints**: Phase 2 output should be reviewed before proceeding to Phase 3
+4. **Validate continuously**: Check format rules as you write each section
+5. **Use real data only**: Never fabricate - use [DATA NEEDED] for gaps
+6. **Reference examples**: Use good/bad examples from examples/ directory as patterns
 
 ---
 

@@ -5,7 +5,7 @@
 
 ## GOOD Example
 
-"Agentic AI Workshop Series (SIFT: hdevore, 3/15/26): Delivered 8 workshops across DAS-GenAI accounts with combined $24M pipeline impact. Workshop covered LangGraph, CrewAI, and Bedrock Agents with hands-on labs. MongoDB (XXL), Databricks (XXL), and Writer AI (XL) all launched POCs within 2 weeks. SA team published reference architecture to Tech Field Community (TFC-1247). [Next: Scale to WWSO via GTM-5544]."
+"Agentic AI Workshop Series (SIFT: hdevore, 3/15/26): Delivered 8 workshops across DAS-GenAI accounts with combined $24M pipeline impact. Workshop covered LangGraph, CrewAI, and Bedrock Agents with hands-on labs. MongoDB, Databricks, and Writer AI all launched POCs within 2 weeks. SA team published reference architecture to Tech Field Community (TFC-1247). [Next: Scale to WWSO via GTM-5544]."
 
 ### Why GOOD
 
@@ -13,9 +13,8 @@
 ✅ **Initiative type clear**: Workshop Series
 ✅ **Cross-account**: 8 workshops across DAS-GenAI (not single account)
 ✅ **Quantified impact**: $24M pipeline
-✅ **Technical details**: LangGraph, CrewAI, Bedrock Agents
-✅ **Specific accounts**: MongoDB, Databricks, Writer AI
-✅ **Size bands**: XXL, XL
+✅ **Technical details**: LangGraph, CrewAI, and Bedrock Agents
+✅ **Specific accounts**: MongoDB, Databricks, Writer AI (no size bands or group labels)
 ✅ **Outcomes measured**: POCs launched within 2 weeks
 ✅ **SA deliverable**: Reference architecture published
 ✅ **TFC code**: TFC-1247 (trackable)
@@ -46,7 +45,7 @@
 - **Initiative type**: Workshop, GameDay, Immersion Day, TFC campaign, reference architecture
 - **Cross-account scope**: Number of accounts, groups involved
 - **Pipeline impact**: $ amount or account count
-- **Specific participants**: Account names with size bands
+- **Specific participants**: Account names (no size bands or group labels)
 - **Outcomes**: POCs launched, migrations started, etc.
 - **SA deliverable**: Reference arch, TFC post, documentation
 - **Tracking codes**: TFC-####, GTM-####
@@ -68,6 +67,7 @@
 - No cross-account patterns (single account work)
 - Vague outcomes without $ or metrics
 - No deliverables produced (reference arch, TFC post)
+- Including size bands (XXL/XL/L) or group labels (DASGENAI-*) in narrative
 
 ## If No Initiatives Found
 

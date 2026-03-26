@@ -41,17 +41,19 @@ Write as a single flowing paragraph including:
 
 **Example Flow**:
 
-"Pattern: [trend description]. [Account1] (XXL, DASGENAI-WEST-A) [action] $X.XM ARR [detail]. [Account2] (XL, DASGENAI-EAST-A) [action] $X.XM ARR [detail]. [Ask: specific request]."
+"Pattern: [trend description]. [Account1] [action] $X.XM ARR [detail]. [Account2] [action] $X.XM ARR [detail]. [Ask: specific request]."
 
 ## Critical Rules
 
 ### DO:
 - Write as flowing narrative paragraphs
 - Include specific $ amounts and % figures
-- Name accounts with size bands
-- Reference group assignments
+- Name accounts (account name only, no size bands or group labels)
 - Lead with NEW content specific to this month
 - Use concrete examples
+- Use "AM" or "SA" as role labels (no individual names)
+- Name customer executives (CEO, CTO, etc.) when relevant
+- Name product managers when referencing AWS contacts
 
 ### DO NOT:
 - Use bullet points anywhere in Q1
@@ -59,6 +61,9 @@ Write as a single flowing paragraph including:
 - Use vague language ("good", "several", "many")
 - Include observations without account names
 - Omit dollar amounts or YoY percentages
+- Include size bands (XXL, XL, L, M) in narrative text
+- Include group references (DASGENAI-WEST-A, etc.) in narrative text
+- Name individual AMs, DMs, or SAs in narrative text
 
 ## Content Scope
 
@@ -90,15 +95,29 @@ Use `[Ask: specific request]` at the end of observations when requesting support
 
 **Contrast with [Next Steps]**: Use [Ask] when you need help from others. Use [Next Steps] (in Q2/Q4) when documenting committed actions you/your team will take.
 
+## Anti-Duplication Rule (CRITICAL)
+
+**Each account appears in ONE quadrant only.**
+
+- Accounts featured in Q1 observations → do NOT repeat in Q4
+- Accounts featured in Q2 risks → do NOT repeat in Q4
+- Choose the quadrant that best represents the primary insight for THIS month
+- If account has multiple stories, pick the most important one for this report
+
+**See also**: [mbr_format_q4.md](mbr_format_q4.md) Anti-Duplication Rule section
+
 ## Quality Checks
 
 Before considering Q1 complete, verify:
 
 - [ ] Zero bullet points used
-- [ ] All 5 groups mentioned (DASGENAI-WEST-A, DASGENAI-EAST-A, DASGENAI-WEST-B, DASGENAI-GENAI-A, DASGENAI-EAST-B)
+- [ ] All 5 groups represented in content (data from all groups, but NO group labels like "DASGENAI-WEST-A" in text)
 - [ ] Specific $ amounts and % included
-- [ ] Each observation has named accounts
-- [ ] Size bands (L/XL/XXL) specified
+- [ ] Each observation has named accounts (account name only, NO size bands like L/XL/XXL)
 - [ ] [Ask] included where appropriate
 - [ ] Content is NEW for this month (not generic)
 - [ ] If group data missing, documented with [DATA NEEDED: {group}]
+- [ ] Accounts in Q1 observations will NOT be repeated in Q4
+- [ ] NO individual AM/DM/SA names in narrative (use "AM" or "SA" as role labels only)
+- [ ] Customer executive names ARE allowed (CEO, CTO, etc.)
+- [ ] PM names ARE allowed (when referencing product contacts)

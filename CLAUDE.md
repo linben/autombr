@@ -88,11 +88,20 @@ available_tools = mcp_client.list_tools_sync()
 **Available Tools**:
 - `sift_insights_search` - Search with filters and date ranges
   - dateRangeStart, dateRangeEnd (ISO 8601 format)
-  - createdBy (group manager aliases)
+  - createdBy (SA aliases, AM aliases, manager aliases - see batch strategy below)
   - category (H/L/O/R/B/C)
   - Returns: title, description, category, createdAt, createdBy
 - `sift_insights_listMyInsights` - List current user's insights
 - `sift_insights_fetchById` - Get full insight details by ID
+
+**Batch Search Strategy** (CRITICAL for complete coverage):
+
+- Execute searches in 10 batches covering ~70 aliases
+- Batches 1-4: SA teams (Choksi, Pierce, Ravula, ICs) - ~31 aliases
+- Batches 5-9: AM teams (West-A, East-A, West-B, GenAI-A, East-B) - ~38 aliases
+- Batch 10: Group managers - ~8 aliases
+- **Why**: Searching only managers misses 60+ SA/AM contributors → incomplete Q4 content
+- **See**: [rules/mbr_data_sources.md](rules/mbr_data_sources.md) Rule 4 for complete alias lists
 
 **SIFT Categories**:
 - **[H]** Highlight - Wins, successes, positive outcomes

@@ -5,7 +5,7 @@
 
 ## GOOD Example
 
-"[R] Grammarly $10M Bedrock CMI Capacity Risk. Grammarly's production workload requires 200K RPS for Meta Llama 3.2 3B to support their 30M daily active users. Current capacity of 20K RPS (10%) is insufficient for full launch planned July 15. SA Mike Chen is on daily stand-ups with Bedrock service team and Grammarly VP Engineering Sarah Kim. Interim milestone of 20K RPS achieved August 4th. [Next Steps: Gradual increase to 100% capacity by July 1st, escalated to Bedrock GM Mark Johnson with Matador tracking]."
+"[R] Grammarly $10M Bedrock CMI Capacity Risk. Grammarly's production workload requires 200K RPS for Meta Llama 3.2 3B to support their 30M daily active users. Current capacity of 20K RPS (10%) is insufficient for full launch planned July 15. SA is on daily stand-ups with Bedrock service team and Grammarly VP Engineering Sarah Kim. Interim milestone of 20K RPS achieved August 4th. [Next Steps: Gradual increase to 100% capacity by July 1st, escalated to Bedrock PM Mark Johnson with Matador tracking]."
 
 ### Why GOOD
 
@@ -13,13 +13,13 @@
 ✅ **Bold title** with $ impact ($10M)
 ✅ **Inline prose** - flows like a story
 ✅ **Specific numbers**: 200K RPS needed, 20K current, 10% progress
-✅ **Account named** (Grammarly)
-✅ **People named**: SA Mike Chen, Sarah Kim (VP Eng), Mark Johnson (Bedrock GM)
+✅ **Account named** (Grammarly, no size band or group label)
+✅ **People named correctly**: "SA" as role label, Sarah Kim (customer VP Eng), Mark Johnson (AWS PM)
 ✅ **Dates included**: July 15 launch, August 4th milestone, July 1st target
 ✅ **Current status**: 20K RPS achieved (interim milestone)
 ✅ **Context**: 30M daily active users (why this matters)
 ✅ **[Next Steps]** with specific owner and date
-✅ **Escalation path**: Matador tracking to Bedrock GM
+✅ **Escalation path**: Matador tracking to Bedrock PM
 
 ## BAD Example (avoid this)
 
@@ -42,13 +42,13 @@
 ### Entry Must Have
 - [TAG] at start ([R], [B], [C], or [O])
 - Bold title with $ impact
-- Account name (with size band ideally)
+- Account name (no size bands or group labels)
 - Specific $ amount at risk or affected
-- Named people (SA, customer contacts, service team members)
+- Named people correctly: "SA"/"AM" as role labels, customer contacts by name, AWS PM contacts by name
 - Tools and systems mentioned
 - Dates (deadlines, milestones, next actions)
 - Current status (%, progress indicators)
-- [Next Steps:] with owner name and specific date
+- [Next Steps:] with owner role (SA/AM) and specific date
 
 ### Narrative Flow
 1. **Open with the risk** and $ impact
@@ -62,6 +62,9 @@
 - Bullet points or nested structure
 - Assuming risks without SIFT/Salesforce evidence
 - Vague next steps ("monitoring", "working on it")
-- Exceeding 4-6 total entries
+- Exceeding 3-5 total entries
 - Creating separate entries for related issues (group them)
 - Missing $ impact or people names
+- Including size bands (XXL/XL/L) or group labels (DASGENAI-*) in narrative
+- Naming individual SAs, AMs, or DMs (use "SA"/"AM" role labels instead)
+- Including customer deprioritization or exploratory activity (apply Q2 content filtration)

@@ -91,9 +91,11 @@ CockroachDB (XL, size estimated from spend)
    - [L] goes to Q4 Lowlights
    - [O] can go to Q1 or Q2 depending on context
 
-2. **Account-level observations can appear in Q1 AND Q4**
-   - Q1: Pattern observation across multiple accounts
-   - Q4: Specific win story with full narrative
+2. **Anti-Duplication Rule (CRITICAL)**: Each account appears in ONE quadrant only
+   - If account is in Q1 observations → do NOT repeat in Q4
+   - If account is in Q2 risks → do NOT repeat in Q4
+   - Choose the quadrant that best represents the primary insight for THIS month
+   - If account has multiple stories, pick the most important one
 
 3. **Cross-account patterns**
    - Q3 if SIFT-sourced with SA engagement

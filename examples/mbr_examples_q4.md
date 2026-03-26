@@ -5,37 +5,37 @@
 
 ## GOOD Example: Highlight
 
-"[H] DataStax $8.4M S3 Tables Migration Win. DataStax (XXL, DASGENAI-WEST-A) migrated their entire managed service backend from GCP Cloud Storage to AWS S3 Tables, representing $8.4M ARR and 42% YoY growth. The migration was driven by S3 Tables' 40% lower TCO and native Iceberg support eliminating their custom translation layer. SA Jennifer Wu conducted 4-week technical deep dive (2/12-3/8) with DataStax CTO Chet Kapoor and VP Engineering Matt Kennedy. Competitive pressure from GCP with $2M incentive offer was overcome by demonstrating 3x query performance improvement in POC. DataStax is now an AWS S3 Tables design partner and will co-present at re:Invent 2026. [Next Steps: Joint PR-FAQ for re:Invent launch, GTM workshop on 4/15 with DataStax GTM lead Sam Chen]."
+"[H] DataStax $8.4M S3 Tables Migration Win. DataStax migrated their entire managed service backend from GCP Cloud Storage to AWS S3 Tables, representing $8.4M ARR and 42% YoY growth. The migration was driven by S3 Tables' 40% lower TCO and native Iceberg support eliminating their custom translation layer. SA conducted 4-week technical deep dive (2/12-3/8) with DataStax CTO Chet Kapoor and VP Engineering Matt Kennedy. Competitive pressure from GCP with $2M incentive offer was overcome by demonstrating 3x query performance improvement in POC. DataStax is now an AWS S3 Tables design partner and will co-present at re:Invent 2026. [Next Steps: Joint PR-FAQ for re:Invent launch, GTM workshop on 4/15 with AWS PM Sam Chen]."
 
 ### Why GOOD (Highlight)
 
 ✅ **[H] tag** used
 ✅ **Bold title** with $ impact
 ✅ **3-5 sentences** forming complete story
-✅ **Account details**: DataStax (XXL, DASGENAI-WEST-A)
+✅ **Account name**: DataStax (no size band or group label)
 ✅ **$ impact**: $8.4M ARR, 42% YoY growth
 ✅ **Technical story**: GCP to S3 Tables migration
 ✅ **Business driver**: 40% lower TCO, native Iceberg
-✅ **SA engagement**: Jennifer Wu, 4-week deep dive (2/12-3/8)
-✅ **People named**: Chet Kapoor (CTO), Matt Kennedy (VP Eng)
+✅ **SA engagement**: "SA" role label, 4-week deep dive (2/12-3/8)
+✅ **People named correctly**: Chet Kapoor (customer CTO), Matt Kennedy (customer VP Eng), Sam Chen (AWS PM)
 ✅ **Competitive context**: GCP $2M incentive offer overcome
 ✅ **Proof point**: 3x query performance in POC
 ✅ **Future impact**: Design partner, re:Invent co-present
-✅ **[Next Steps]**: Specific actions with owner (Sam Chen) and date (4/15)
+✅ **[Next Steps]**: Specific actions with owner role (AWS PM) and date (4/15)
 
 ## GOOD Example: Lowlight
 
-"[L] MongoDB Atlas Marketplace Deal Delay. MongoDB's (XXL, DASGENAI-EAST-A) $4.2M Atlas renewal through AWS Marketplace was delayed 6 weeks due to procurement approval process at their enterprise customer JPMorgan Chase. The delay impacted Q1 close and required SA Tim Brown and AM Lisa Wong to escalate to MongoDB CFO Dev Ittycheria on 3/18. Root cause was MongoDB's sales team not engaging AWS Marketplace specialists early enough in the deal cycle. MongoDB committed to Marketplace training for their field team and will route all $1M+ renewals through AWS PDM Sarah Chen starting in Q2. [Next Steps: Monthly checkpoint calls with MongoDB sales ops to track Marketplace adoption, AWS PDM to present at MongoDB SKO in May]."
+"[L] MongoDB Atlas Marketplace Deal Delay. MongoDB's $4.2M Atlas renewal through AWS Marketplace was delayed 6 weeks due to procurement approval process at their enterprise customer JPMorgan Chase. The delay impacted Q1 close and required SA and AM to escalate to MongoDB CFO Dev Ittycheria on 3/18. Root cause was MongoDB's sales team not engaging AWS Marketplace specialists early enough in the deal cycle. MongoDB committed to Marketplace training for their field team and will route all $1M+ renewals through AWS PDM Sarah Chen starting in Q2. [Next Steps: Monthly checkpoint calls with MongoDB sales ops to track Marketplace adoption, AWS PDM to present at MongoDB SKO in May]."
 
 ### Why GOOD (Lowlight)
 
 ✅ **[L] tag** used
 ✅ **Bold title** describing the problem
 ✅ **3-5 sentences** forming complete story
-✅ **Account details**: MongoDB (XXL, DASGENAI-EAST-A)
+✅ **Account name**: MongoDB (no size band or group label)
 ✅ **$ impact**: $4.2M renewal delayed
 ✅ **Problem**: 6-week delay, Q1 close missed
-✅ **People named**: Tim Brown (SA), Lisa Wong (AM), Dev Ittycheria (CFO)
+✅ **People named correctly**: "SA" and "AM" as role labels, Dev Ittycheria (customer CFO), Sarah Chen (AWS PDM)
 ✅ **Date**: 3/18 escalation
 ✅ **Root cause**: Marketplace specialists not engaged early
 ✅ **Lesson learned**: Training field team on Marketplace
@@ -96,3 +96,6 @@
 - Vague next steps
 - No root cause in lowlights
 - Generic language without specifics
+- Including size bands (XXL/XL/L) or group labels (DASGENAI-*) in narrative
+- Naming individual SAs, AMs, or DMs (use "SA"/"AM" role labels instead)
+- Repeating accounts already mentioned in Q1 or Q2 (anti-duplication rule)
